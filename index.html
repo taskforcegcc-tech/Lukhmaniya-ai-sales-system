@@ -8,13 +8,23 @@
 
 <style>
 
-  .product-icon img {
-  width: 180px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 12px;
-  display: block;
-  margin: auto;
+.product-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    display: block;
 }
 *{
   box-sizing:border-box;
@@ -259,7 +269,7 @@ footer{
 <div class="products">
 
 <div class="card">
-<div class="product-icon"><img src=hair-dye.jpg alt="Natural Hair Dye"> </div>
+<div class="product-icon"> <img src="hair-dye.jpg" alt="Natural Hair Dye"> </div>
 <h3>Natural Hair Dye</h3>
 <p>Natural hair & beard dye</p>
 <div class="price">₹400</div>
