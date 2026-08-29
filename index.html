@@ -274,8 +274,10 @@ footer{
 <h3>Natural Hair Dye</h3>
 <p>Natural hair & beard dye</p>
 <div class="price">₹400</div>
-<a class="whatsapp" href="https://wa.me/918590963646?text=Hello%2C%20I%20want%20to%20order%20Natural%20Hair%20Dye%20-%20%E2%82%B9400">
-    WhatsApp Order
+<a class="whatsapp"
+   href="#contact"
+   onclick="selectProduct('Natural Hair Dye', 400); return false;">
+   WhatsApp Order
 </a>
 </div>
 
@@ -561,12 +563,16 @@ function sendMessage(){
 </script>
     <script>
 function sendMessage() {
-
     var name = document.getElementById("name").value;
     var phone = document.getElementById("phone").value;
     var address = document.getElementById("address").value;
     var product = document.getElementById("product").value;
     var quantity = document.getElementById("quantity").value;
+
+    if (!name || !phone || !address || !product || !quantity) {
+        alert("Please fill all order details");
+        return false;
+    }
 
     var message =
         "NEW ORDER%0A%0A" +
@@ -582,6 +588,8 @@ function sendMessage() {
         "https://wa.me/" + whatsappNumber + "?text=" + message;
 
     window.open(whatsappURL, "_blank");
+
+    return false;
 }
 </script>
 
