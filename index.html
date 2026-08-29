@@ -502,16 +502,24 @@ Our aim is to bring natural products closer to every family.
 
 <form onsubmit="sendMessage(); return false;">
 
-<input id="name" type="text" placeholder="Your Name" required>
+<input id="name" type="text"
+placeholder="Customer Name" required>
 
-<input id="phone" type="tel" placeholder="Phone Number" required>
+<input id="phone" type="tel"
+placeholder="Phone Number" required>
 
-<textarea id="message" rows="5"
-placeholder="Which product do you need?"></textarea>
+<input id="address" type="text"
+placeholder="Delivery Address" required>
+
+<input id="product" type="text"
+placeholder="Product Name" required>
+
+<input id="quantity" type="number"
+placeholder="Quantity" min="1" value="1" required>
 
 <button type="submit">Send Order on WhatsApp</button>
 
-</form>
+</form> 
 
 </div>
 
@@ -550,6 +558,31 @@ function sendMessage(){
   );
 }
 
+</script>
+    <script>
+function sendMessage() {
+
+    var name = document.getElementById("name").value;
+    var phone = document.getElementById("phone").value;
+    var address = document.getElementById("address").value;
+    var product = document.getElementById("product").value;
+    var quantity = document.getElementById("quantity").value;
+
+    var message =
+        "NEW ORDER%0A%0A" +
+        "Customer Name: " + encodeURIComponent(name) + "%0A" +
+        "Phone: " + encodeURIComponent(phone) + "%0A" +
+        "Address: " + encodeURIComponent(address) + "%0A" +
+        "Product: " + encodeURIComponent(product) + "%0A" +
+        "Quantity: " + encodeURIComponent(quantity);
+
+    var whatsappNumber = "918590963646";
+
+    var whatsappURL =
+        "https://wa.me/" + whatsappNumber + "?text=" + message;
+
+    window.open(whatsappURL, "_blank");
+}
 </script>
 
 </body>
