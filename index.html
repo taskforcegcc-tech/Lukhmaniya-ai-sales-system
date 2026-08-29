@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lukhmaniya Natural Products</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:#f7f5ed;
+  color:#173d25;
+}
+
+header{
+  background:#123b24;
+  color:white;
+  padding:18px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.logo{
+  font-size:24px;
+  font-weight:bold;
+  color:#e5b94f;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:20px;
+  font-weight:bold;
+}
+
+.hero{
+  padding:80px 7%;
+  background:linear-gradient(135deg,#123b24,#285d38);
+  color:white;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:46px;
+  color:#e8c45a;
+  margin-bottom:15px;
+}
+
+.hero p{
+  font-size:19px;
+  margin-bottom:25px;
+}
+
+.btn{
+  display:inline-block;
+  padding:13px 25px;
+  background:#d9ad3d;
+  color:#123b24;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:bold;
+  margin:5px;
+}
+
+.section{
+  padding:55px 7%;
+}
+
+.section h2{
+  text-align:center;
+  font-size:32px;
+  margin-bottom:35px;
+  color:#17482a;
+}
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:white;
+  border-radius:15px;
+  padding:22px;
+  box-shadow:0 4px 15px rgba(0,0,0,.08);
+  text-align:center;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+.product-icon{
+  width:100px;
+  height:100px;
+  margin:auto auto 15px;
+  border-radius:50%;
+  background:#e5c768;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:42px;
+}
+
+.card h3{
+  color:#17482a;
+  margin-bottom:8px;
+}
+
+.price{
+  color:#b48719;
+  font-size:21px;
+  font-weight:bold;
+  margin:12px;
+}
+
+.whatsapp{
+  background:#168b43;
+  color:white;
+  padding:10px 18px;
+  border-radius:25px;
+  text-decoration:none;
+  display:inline-block;
+  font-weight:bold;
+}
+
+.about{
+  background:#e9e3ca;
+  text-align:center;
+}
+
+.about p{
+  max-width:800px;
+  margin:auto;
+  line-height:1.8;
+  font-size:17px;
+}
+
+.form-box{
+  max-width:600px;
+  margin:auto;
+  background:white;
+  padding:30px;
+  border-radius:15px;
+  box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+input,textarea{
+  width:100%;
+  padding:14px;
+  margin:8px 0 15px;
+  border:1px solid #ccc;
+  border-radius:8px;
+}
+
+button{
+  width:100%;
+  padding:14px;
+  background:#17482a;
+  color:white;
+  border:0;
+  border-radius:8px;
+  font-size:16px;
+  font-weight:bold;
+}
+
+footer{
+  background:#123b24;
+  color:white;
+  text-align:center;
+  padding:30px;
+}
+
+.ai{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:#d9ad3d;
+  color:#123b24;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:25px;
+  box-shadow:0 4px 15px rgba(0,0,0,.3);
+  text-decoration:none;
+}
+
+@media(max-width:700px){
+  nav{
+    display:none;
+  }
+
+  .hero h1{
+    font-size:34px;
+  }
+
+  .hero{
+    padding:60px 5%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">LUKHMANIYA</div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <h1>Natural Life, Better Life</h1>
+
+  <p>
+    Lukhmaniya Natural Products<br>
+    Organic • Natural • Traditional
+  </p>
+
+  <a href="#products" class="btn">Explore Products</a>
+
+  <a href="#contact" class="btn">Order Now</a>
+</section>
+
+<section class="section" id="products">
+
+<h2>Our Products</h2>
+
+<div class="products">
+
+<div class="card">
+<div class="product-icon">🌿</div>
+<h3>Natural Hair Dye</h3>
+<p>Natural hair & beard dye</p>
+<div class="price">₹400</div>
+<a class="whatsapp" href="https://wa.me/?text=I%20want%20to%20order%20Natural%20Hair%20Dye">
+WhatsApp Order
+</a>
+</div>
+
+<div class="card">
+<div class="product-icon">💆</div>
+<h3>Natural Hair Oil</h3>
+<p>100% Natural Hair Care Oil</p>
+<div class="price">₹350</div>
+<a class="whatsapp" href="https://wa.me/?text=I%20want%20to%20order%20Natural%20Hair%20Oil">
+WhatsApp Order
+</a>
+</div>
+
+<div class="card">
+<div class="product-icon">🥥</div>
+<h3>Virgin Coconut Oil</h3>
+<p>Natural skin & hair care</p>
+<div class="price">₹350</div>
+<a class="whatsapp" href="https://wa.me/?text=I%20want%20to%20order%20Virgin%20Coconut%20Oil">
+WhatsApp Order
+</a>
+</div>
+
+<div class="card">
+<div class="product-icon">✨</div>
+<h3>Peeti Oil</h3>
+<p>Natural skin care oil</p>
+<div class="price">₹350</div>
+<a class="whatsapp" href="https://wa.me/?text=I%20want%20to%20order%20Peeti%20Oil">
+WhatsApp Order
+</a>
+</div>
+
+<div class="card">
+<div class="product-icon">🌱</div>
+<h3>Pain Oil</h3>
+<p>Traditional body massage oil</p>
+<div class="price">₹150</div>
+<a class="whatsapp" href="https://wa.me/?text=I%20want%20to%20order%20Pain%20Oil">
+WhatsApp Order
+</a>
+</div>
+
+<div class="card">
+<div class="product-icon">🦶</div>
+<h3>Foot Cream</h3>
+<p>Natural foot care cream</p>
+<div class="price">₹350</div>
+<a class="whatsapp" href="https://wa.me/?text=I%20want%20to%20order%20Foot%20Cream">
+WhatsApp Order
+</a>
+</div>
+
+<div class="card">
+<div class="product-icon">🌾</div>
+<h3>Kodo Millet</h3>
+<p>Organic & unpolished millet</p>
+<div class="price">₹210</div>
+<a class="whatsapp" href="https://wa.me/?text=I%20want%20to%20order%20Kodo%20Millet">
+WhatsApp Order
+</a>
+</div>
+
+<div class="card">
+<div class="product-icon">🌾</div>
+<h3>Sorghum Millet</h3>
+<p>Organic & unpolished millet</p>
+<div class="price">₹210</div>
+<a class="whatsapp" href="https://wa.me/?text=I%20want%20to%20order%20Sorghum%20Millet">
+WhatsApp Order
+</a>
+</div>
+
+<div class="card">
+<div class="product-icon">🌾</div>
+<h3>Foxtail Millet</h3>
+<p>Organic & unpolished millet</p>
+<div class="price">₹210</div>
+<a class="whatsapp" href="https://wa.me/?text=I%20want%20to%20order%20Foxtail%20Millet">
+WhatsApp Order
+</a>
+</div>
+
+<div class="card">
+<div class="product-icon">🌾</div>
+<h3>Brown Top Millet</h3>
+<p>Organic & unpolished millet</p>
+<div class="price">₹210</div>
+<a class="whatsapp" href="https://wa.me/?text=I%20want%20to%20order%20Brown%20Top%20Millet">
+WhatsApp Order
+</a>
+</div>
+
+<div class="card">
+<div class="product-icon">🌾</div>
+<h3>Little Millet</h3>
+<p>Organic & unpolished millet</p>
+<div class="price">₹210</div>
+<a class="whatsapp" href="https://wa.me/?text=I%20want%20to%20order%20Little%20Millet">
+WhatsApp Order
+</a>
+</div>
+
+<div class="card">
+<div class="product-icon">🌾</div>
+<h3>Barnyard Millet</h3>
+<p>Organic & unpolished millet</p>
+<div class="price">₹210</div>
+<a class="whatsapp" href="https://wa.me/?text=I%20want%20to%20order%20Barnyard%20Millet">
+WhatsApp Order
+</a>
+</div>
+
+<div class="card">
+<div class="product-icon">🍚</div>
+<h3>Karupu Kavuni Rice</h3>
+<p>100% Organic</p>
+<div class="price">₹230</div>
+<a class="whatsapp" href="https://wa.me/?text=I%20want%20to%20order%20Karupu%20Kavuni%20Rice">
+WhatsApp Order
+</a>
+</div>
+
+<div class="card">
+<div class="product-icon">🍚</div>
+<h3>Navara Rice</h3>
+<p>100% Organic</p>
+<div class="price">₹160</div>
+<a class="whatsapp" href="https://wa.me/?text=I%20want%20to%20order%20Navara%20Rice">
+WhatsApp Order
+</a>
+</div>
+
+<div class="card">
+<div class="product-icon">🥣</div>
+<h3>Fruit & Nut Muesli</h3>
+<p>Organic healthy food</p>
+<div class="price">₹120</div>
+<a class="whatsapp" href="https://wa.me/?text=I%20want%20to%20order%20Fruit%20and%20Nut%20Muesli">
+WhatsApp Order
+</a>
+</div>
+
+<div class="card">
+<div class="product-icon">🪥</div>
+<h3>Natural Tooth Powder</h3>
+<p>Natural dental care</p>
+<div class="price">₹100</div>
+<a class="whatsapp" href="https://wa.me/?text=I%20want%20to%20order%20Natural%20Tooth%20Powder">
+WhatsApp Order
+</a>
+</div>
+
+<div class="card">
+<div class="product-icon">🥛</div>
+<h3>Natural Cow Ghee</h3>
+<p>Organic cow ghee</p>
+<div class="price">₹1,400</div>
+<a class="whatsapp" href="https://wa.me/?text=I%20want%20to%20order%20Natural%20Cow%20Ghee">
+WhatsApp Order
+</a>
+</div>
+
+<div class="card">
+<div class="product-icon">🧴</div>
+<h3>Natural Sunscreen</h3>
+<p>Natural face protection</p>
+<div class="price">₹350</div>
+<a class="whatsapp" href="https://wa.me/?text=I%20want%20to%20order%20Natural%20Sunscreen">
+WhatsApp Order
+</a>
+</div>
+
+<div class="card">
+<div class="product-icon">🌙</div>
+<h3>Natural Night Cream</h3>
+<p>Natural face care</p>
+<div class="price">₹450</div>
+<a class="whatsapp" href="https://wa.me/?text=I%20want%20to%20order%20Natural%20Night%20Cream">
+WhatsApp Order
+</a>
+</div>
+
+<div class="card">
+<div class="product-icon">🌿</div>
+<h3>Natural Aloe Vera Jelly</h3>
+<p>For face & body</p>
+<div class="price">₹180</div>
+<a class="whatsapp" href="https://wa.me/?text=I%20want%20to%20order%20Aloe%20Vera%20Jelly">
+WhatsApp Order
+</a>
+</div>
+
+<div class="card">
+<div class="product-icon">🥒</div>
+<h3>Natural Cucumber Jelly</h3>
+<p>Natural face care</p>
+<div class="price">₹180</div>
+<a class="whatsapp" href="https://wa.me/?text=I%20want%20to%20order%20Cucumber%20Jelly">
+WhatsApp Order
+</a>
+</div>
+
+</div>
+</section>
+
+<section class="section about" id="about">
+
+<h2>About Lukhmaniya</h2>
+
+<p>
+Lukhmaniya is focused on natural and traditional products
+for healthy living, personal care and organic food.
+Our aim is to bring natural products closer to every family.
+</p>
+
+</section>
+
+<section class="section" id="contact">
+
+<h2>Order / Contact Us</h2>
+
+<div class="form-box">
+
+<form onsubmit="sendMessage(); return false;">
+
+<input id="name" type="text" placeholder="Your Name" required>
+
+<input id="phone" type="tel" placeholder="Phone Number" required>
+
+<textarea id="message" rows="5"
+placeholder="Which product do you need?"></textarea>
+
+<button type="submit">Send Order on WhatsApp</button>
+
+</form>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Lukhmaniya Natural Products</p>
+<p>Natural • Organic • Traditional</p>
+
+</footer>
+
+<a class="ai"
+href="#contact"
+title="AI Assistant">
+🤖
+</a>
+
+<script>
+
+function sendMessage(){
+
+  var name=document.getElementById("name").value;
+  var phone=document.getElementById("phone").value;
+  var message=document.getElementById("message").value;
+
+  var text=
+  "Hello Lukhmaniya,%0A%0A"+
+  "Name: "+name+"%0A"+
+  "Phone: "+phone+"%0A"+
+  "Product/Message: "+message;
+
+  window.open(
+    "https://wa.me/?text="+text,
+    "_blank"
+  );
+}
+
+</script>
+
+</body>
+</html>
